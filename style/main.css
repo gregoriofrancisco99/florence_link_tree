@@ -234,8 +234,9 @@ footer a:hover{
   }
 
   img.avatar {
-    height: 120px;
-    width: 120px;
+    /* make the avatar relatively larger on small screens but still responsive */
+    height: clamp(140px, 20vw, 220px);
+    width: clamp(140px, 20vw, 220px);
   }
 
   h1 {
