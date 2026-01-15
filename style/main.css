@@ -50,8 +50,8 @@ body.darkPink{
 
 img.avatar {
   
-  height: 100px;
-  width: 100px;
+  height: 200px;
+  width: 200px;
   padding: 3.7px;
   
   
@@ -116,17 +116,40 @@ ul li a {
   font-size: 14px;
   font-weight: 500;
 
-transition: 0.3s;
+transition: 0.35s;
 
 }
 
 ul li a:hover{
-  background: var(--card-hover-color);
+  background: #fff;
+  border: var(--card-color) solid 3px;
+  color: #000;
 }
 
-ul li a i {
+
+ul li i {
   margin-right: 1em;
-  font-size: 2em;
+  font-size: 2em !important;
+}
+
+ul li a:hover i#whatsapp {
+  color: #25D366;
+}
+
+ul li a:hover i#linkedin {
+  color: #0077B5;
+}
+
+ul li a:hover i#instagram {
+  color: #E1306C;
+}
+
+ul li a:hover i#tiktok {
+  color: #69C9EF;
+}
+
+ul li a:hover i#facebook {
+  color: #1877F2;
 }
 
 #color-pallete {
@@ -200,4 +223,49 @@ footer a {
 }
 footer a:hover{
     text-decoration: underline;
+}
+
+/* Responsive exception for devices lower than 800px */
+@media (max-width: 800px) {
+  .container {
+    width: 90%;
+    max-width: 420px;
+    margin: 40px auto 0;
+  }
+
+  img.avatar {
+    height: 120px;
+    width: 120px;
+  }
+
+  h1 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  p.username {
+    font-size: 16px;
+  }
+
+  p.bio {
+    font-size: 15px;
+  }
+
+  ul li a {
+    height: 60px;
+    font-size: 15px;
+  }
+
+  /* Keep the color palette accessible on smaller screens */
+  #color-pallete {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+  }
+
+  /* Let footer flow after content to avoid overlap on short viewports */
+  footer {
+    position: static;
+    padding: 2em 0 3em;
+  }
 }
